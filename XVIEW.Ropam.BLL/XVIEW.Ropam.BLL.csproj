@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{797775F8-6AF5-4F69-8175-B6C9C21BF270}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>XVIEW.Ropam.BLL</RootNamespace>
+    <AssemblyName>XVIEW.Ropam.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=1.0.0.505, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.1.0.0.505\lib\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\Access.cs" />
+    <Compile Include="BO\BadFrameException.cs" />
+    <Compile Include="BO\AnalogInput.cs" />
+    <Compile Include="BO\Command.cs" />
+    <Compile Include="BO\Concat.cs" />
+    <Compile Include="BO\Input.cs" />
+    <Compile Include="BO\NotLoggedException.cs" />
+    <Compile Include="BO\Output.cs" />
+    <Compile Include="BO\ParseStatusException.cs" />
+    <Compile Include="BO\SiteConnection.cs" />
+    <Compile Include="BO\SocketClosedException.cs" />
+    <Compile Include="BO\TempSensor.cs" />
+    <Compile Include="BO\WirelessSensor.cs" />
+    <Compile Include="BO\Zone.cs" />
+    <Compile Include="Services\WebServer.cs" />
+    <Compile Include="TcpClientStreamSocket.cs" />
+    <Compile Include="TcpConnectException.cs" />
+    <Compile Include="BO\NeoConfig.cs" />
+    <Compile Include="BO\Event.cs" />
+    <Compile Include="BO\ThermostatProfile.cs" />
+    <Compile Include="BO\User.cs" />
+    <Compile Include="BO\Widget.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="BO\Message.cs" />
+    <Compile Include="BO\NeoModel.cs" />
+    <Compile Include="BO\NeoModelExt.cs" />
+    <Compile Include="BO\Site.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Frame.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="XTcpClient.cs" />
+    <Compile Include="VMPC.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
